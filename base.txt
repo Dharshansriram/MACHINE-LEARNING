@@ -1,0 +1,11 @@
+import pandas as pd
+import numpy as np
+df = pd.DataFrame(np.random.randn(5,3),index=['a','n','c','d','e'],columns=['one','two','three'])
+df = df.reindex(['a','b','c','d','e','f','g','h'])
+print(df)
+print(df['two'].notnull())
+print(df['one'].fillna(25))
+print(df['one'].dropna())
+print(df['two'].isnull())
+print(df['three'].bfill())
+print(df['one'].ffill())
